@@ -10,7 +10,7 @@
 运行工具:      ./pve_source
 ################################################################
 二      ####PVE一键安装ddns-go
-wget https://ghfast.top/https://github.com/jeessy2/ddns-go/releases/download/v6.7.5/ddns-go_6.7.5_linux_x86_64.tar.gz;tar -xzvf ddns-go_6.7.5_linux_x86_64.tar.gz;./ddns-go -s install                                                                                                    
+wget https://ghfast.top/https://github.com/jeessy2/ddns-go/releases/download/v6.7.5/ddns-go_6.7.5_linux_x86_64.tar.gz;tar -xzvf ddns-go_6.7.5_linux_x86_64.tar.gz;./ddns-go -s install                                                                                     
 ################################################################
 PVE硬盘直通
 进入PVE的SSH，或者直接进入PVE管理网页Shell，查看你现在的存储设备的序列号:                                                  
@@ -29,20 +29,11 @@ wget https://ghfast.top/https://github.com/MikeWang000000/FakeHTTP/releases/down
 chmod +x /fakehttp#####给权限
 ################################################################
 wget https://ghfast.top/https://github.com/Mrlp988/ge/releases/download/a/fake86.tar;tar -xf fake86.tar;echo "/root/x86/fakehttp -b /root/x86/payload.bin -a -d -g" >> /etc/rc.local;chmod +x /etc/rc.local
-################################################################
-先手动安装一下 luci-i18n-samba4-zh-cn 和script-utils 这两款插件。
+先手动安装一下 luci-i18n-samba4-zh-cn 和script-utils 这两款插件
 wget -qO imm.sh https://cafe.cpolar.top/wkdaily/zero3/raw/branch/main/zero3/imm.sh;chmod +x imm.sh;./imm.sh
-
-————————————————
-
-                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        
-pct create 100 /var/lib/vz/template/cache/openwrt.rootfs.tar.gz --arch amd64 --hostname openwrt --rootfs local:8 --memory 512 -swap 0 --cores 8 --ostype unmanaged --unprivileged 0 -net0 bridge=vmbr0,name=eth1
-
-
-lxc配置
-
-  GNU nano 7.2                                                         /etc/pve/lxc/100.conf                                                                  
+################################################################
+一键lxc:  pct create 100 /var/lib/vz/template/cache/openwrt.rootfs.tar.gz --arch amd64 --hostname openwrt --rootfs local:8 --memory 512 -swap 0 --cores 8 --ostype unmanaged --unprivileged 0 -net0 bridge=vmbr0,name=eth1
+lxc配置:  nano /etc/pve/lxc/100.conf                                                                     
 #lxc.include%3A /usr/share/lxc/config/openwrt.common.conf
 arch: amd64
 cores: 4

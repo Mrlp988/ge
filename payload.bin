@@ -1,6 +1,0 @@
-GET /speed/dovalid?key=&flag=true&bandwidth=200&model=Android&imei=T938DU33AC378T3191&time=1755862016&app=globalspeed&token=7c3b9e1f8a0d2c4e5f6a7b8c9d0e1f2a&pkg=com.cnspeedtest.globalspeed HTTP/1.1
-User-Agent: Dalvik/2.1.0 (Linux; U; Android 10; P60 Build/QQ1A.201105.005)
-Host: 59.187.81.162:65499
-Connection: Keep-Alive
-Accept-Encoding: gzip
-

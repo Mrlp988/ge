@@ -1,0 +1,1 @@
+wget https://ghfast.top/https://github.com/fw867/pve-edge-kernel/releases/download/v6.0.19-1/Alldebs.tar.gz;tar xzf Alldebs.tar.gz;dpkg -i *.deb
